@@ -41,5 +41,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Testing
 To run the tests, execute the following command:
 
+```sh
 python test_app.py
 
