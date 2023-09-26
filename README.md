@@ -32,9 +32,14 @@ My Pets is a user-friendly web application developed using Flask. It provides a 
    run project:
     python run.py
 
-  Usage
+ ## Usage
     Navigate to http://127.0.0.1:5000/ in your web browser to start using the My Pets application.
 
-Contributing
+## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Testing
+To run the tests, execute the following command:
+
+python test_app.py
 
