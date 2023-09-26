@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Pets</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Pets</h1>
+        <form method="POST" action="/api/add_pet" class="bg-light p-3 rounded">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="species">Species:</label>
+                <input type="text" name="species" id="species" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="breed">Breed:</label>
+                <input type="text" name="breed" id="breed" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" class="form-control"></textarea>
+            </div>
+            <input type="submit" value="Add Pet" class="btn btn-primary">
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Species</th>
+                    <th>Breed</th>
+                    <th>Age</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pet in pets %}
+                <tr>
+                    <td>{{ pet.name }}</td>
+                    <td>{{ pet.species }}</td>
+                    <td>{{ pet.breed }}</td>
+                    <td>{{ pet.age }}</td>
+                    <td>{{ pet.description }}</td>
+                    <td>
+                        <a href="{{ url_for('main.edit_pet', pet_id=pet.id) }}" class="btn btn-warning">Edit</a>
+                        <form method="POST" action="{{ url_for('main.delete_pet', pet_id=pet.id) }}">
+                            <input type="submit" value="Delete" class="btn btn-danger">
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
