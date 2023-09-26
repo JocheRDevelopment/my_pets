@@ -38,11 +38,11 @@ My Pets is a user-friendly web application developed using Flask. It provides a 
    ```
    
  ## Usage
-    Navigate to 
+   **Navigate to:**
     ```sh
     http://127.0.0.1:5000/ 
     ```
-    in your web browser to start using the My Pets application.
+    **in your web browser to start using the My Pets application.**
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
