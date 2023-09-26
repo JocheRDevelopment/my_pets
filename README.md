@@ -18,20 +18,25 @@ My Pets is a user-friendly web application developed using Flask. It provides a 
    ```sh
    git clone https://github.com/username/my-pets.git
    cd my-pets
-
+   ```
+2. **Install dependencies:**
+   ```sh
    pip install Flask
    pip install Flask-SQLAlchemy
    pip install Flask-Migrate
-
-   run commands:
+   ```
+3. **Setup DB:**
+    ```sh
     export FLASK_APP=run.py
     flask db init
     flask db migrate -m "Initial migration."
     flask db upgrade
-
-   run project:
-    python run.py
-
+    ```
+4. **Run project:**
+   ```sh
+   python run.py
+   ```
+   
  ## Usage
     Navigate to http://127.0.0.1:5000/ in your web browser to start using the My Pets application.
 
